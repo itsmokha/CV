@@ -1,0 +1,186 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% Awesome CV - Dyson Data Intelligence MLOps Engineer
+
+\documentclass[11pt, a4paper]{awesome-cv}
+
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+\colorlet{awesome}{awesome-red}
+\setbool{acvSectionColorHighlight}{true}
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+\name{Mohammed Omar}{Khan}
+\position{Systems & Platform Engineer \enskip\cdotp\enskip MLOps}
+\address{Abu Dhabi, UAE}
+\mobile{(+971) 56-286-1951}
+\email{omar@itsmokha.com}
+\homepage{www.itsmokha.com}
+\github{itsmokha}
+\linkedin{m-omarkhan}
+\quote{MLOps engineer focused on turning ML experimentation into reliable, observable production systems.}
+
+\begin{document}
+
+\makecvheader[R]
+
+\makecvfooter
+  {Mohammed Omar Khan}
+  {Curriculum Vitae}
+  {\thepage}
+
+%-------------------------------------------------------------------------------
+\cvsection{Summary}
+\begin{cvparagraph}
+Systems and platform engineer with 3+ years of experience across infrastructure, data engineering, automation and machine learning. Currently operate production platforms inside a strictly network-isolated UAE government environment, spanning Red Hat OpenShift, Nutanix, Linux/Solaris, Python/Bash automation and centralized observability. Outside work, build and operate a self-hosted Kubernetes platform for ML workloads, including offline LLM serving through vLLM, RAG, agentic workflows, persistent storage, CI/CD and Prometheus/Grafana observability. Seeking to apply this infrastructure and ML background to industrialize the machine-learning lifecycle from experimentation through reliable, observable deployment.
+\end{cvparagraph}
+
+%-------------------------------------------------------------------------------
+\cvsection{Experience}
+\begin{cventries}
+
+  \cventry
+    {Systems Engineer -- Deployed Onsite to a UAE Government Agency}
+    {Midis Group}
+    {Abu Dhabi, UAE}
+    {Mar 2024 -- Present}
+    {
+      \begin{cvitems}
+        \item {Operate as the onsite technical point of contact within a strictly air-gapped government environment, translating operational requirements into deployed and supportable solutions.}
+        \item {Administer Nutanix and Red Hat OpenShift platforms, mixed Linux/Solaris servers and a local Elastic Cloud Enterprise environment, with support for GPU-equipped infrastructure.}
+        \item {Designed, deployed and operate centralized Elasticsearch + Kibana observability used by stakeholders for operational visibility and troubleshooting.}
+        \item {Author Python and Bash automation for operational data and reporting workflows; use Ansible for infrastructure automation and OpenShift Pipelines for platform workflows.}
+        \item {Used n8n to automate operational workflows, improving workplace efficiency by at least 20\%.}
+        \item {Coordinate with vendor teams and troubleshoot across operating-system, application, network and platform layers in a constrained production environment.}
+      \end{cvitems}
+    }
+
+  \cventry
+    {Big Data Intern}
+    {MDS TSS (Midis Group)}
+    {UAE}
+    {May 2023 -- Mar 2024}
+    {
+      \begin{cvitems}
+        \item {Completed Hadoop training and contributed to customer big-data engagements, including cluster deployment exercises and pipeline tuning.}
+        \item {Developed Python automation for customer data-mining and analysis workflows and produced operational reports covering ticket throughput and SLA performance.}
+      \end{cvitems}
+    }
+
+  \cventry
+    {Teaching Assistant}
+    {Heriot-Watt University Dubai}
+    {Dubai, UAE}
+    {Sep 2022 -- May 2023}
+    {
+      \begin{cvitems}
+        \item {Mentored 50+ Computer Science students in Python, machine-learning algorithms, data visualization, Jupyter and ML tooling.}
+        \item {Assisted faculty across undergraduate Computer Science modules, including AI/ML-focused courses.}
+      \end{cvitems}
+    }
+
+\end{cventries}
+
+%-------------------------------------------------------------------------------
+\cvsection{Selected MLOps / Engineering Projects}
+\begin{cventries}
+
+  \cventry
+    {Local GenAI Stack -- LLM Serving, RAG and Agentic Orchestration}
+    {Self-Hosted ML Platform}
+    {}
+    {}
+    {
+      \begin{cvitems}
+        \item {Deployed Qwen, DeepSeek and LLaMA-family open-weight models fully offline on a self-managed Kubernetes cluster, benchmarking vLLM, Hugging Face TGI and Ollama as inference runtimes.}
+        \item {Exposed an OpenAI-compatible inference API through vLLM and configured tool calling with automatic tool choice and a Hermes-style parser for agentic applications.}
+        \item {Built LangGraph orchestration workflows with stateful multi-step execution, tool selection, conditional routing and handoff patterns.}
+        \item {Ran GGUF, GPTQ and AWQ quantized models and measured throughput/latency trade-offs across runtimes and quantization levels to select suitable deployment configurations for constrained GPU resources.}
+        \item {Built a LangChain RAG pipeline over a Markdown knowledge base using local embeddings and Chroma, tuning chunking, retrieval top-K and prompt construction against context-window constraints.}
+      \end{cvitems}
+    }
+
+  \cventry
+    {Self-Hosted Kubernetes Platform}
+    {Kubernetes / Proxmox / Observability}
+    {}
+    {}
+    {
+      \begin{cvitems}
+        \item {Built and operate a 3-node kubeadm Kubernetes cluster across Proxmox and bare-metal nodes for stateful services and AI workloads.}
+        \item {Designed storage using dynamic persistent-volume provisioning through CSIs, CloudNativePG for stateful PostgreSQL workloads and backups.}
+        \item {Implemented cluster networking and access control, with Tailscale for controlled remote connectivity to applications.}
+        \item {Deployed kube-prometheus-stack, Grafana, Loki and Alloy for metrics and log observability across cluster and application workloads.}
+        \item {Run Forgejo as self-hosted Git infrastructure, supporting reproducible deployment and Git-centric operational workflows.}
+      \end{cvitems}
+    }
+
+  \cventry
+    {vscan -- Open-Source Python Security Scanner}
+    {Python / GitHub Actions / PyPI}
+    {}
+    {}
+    {
+      \begin{cvitems}
+        \item {Led development of a Python-based scanner integrating external APIs to analyze files and websites for malicious content.}
+        \item {Built a GitHub Actions CI/CD pipeline that runs tests on pull requests and automatically builds and publishes versioned PyPI releases from tagged commits.}
+      \end{cvitems}
+    }
+
+  \cventry
+    {Advertisement Detection -- Final-Year Capstone}
+    {PyTorch / TensorFlow / Scikit-learn / NLP}
+    {}
+    {}
+    {
+      \begin{cvitems}
+        \item {Implemented and trained classifiers on a 1M+ row URL dataset, engineering NLP-based features from URL structure to detect advertising links.}
+        \item {Compared neural networks, XGBoost, SVMs, LightGBM and Random Forests, achieving 80\% classification accuracy.}
+      \end{cvitems}
+    }
+
+\end{cventries}
+
+%-------------------------------------------------------------------------------
+\cvsection{Technical Skills}
+\begin{cvskills}
+  \cvskill{MLOps / ML}{MLflow, ML lifecycle, model serving, experiment tracking, PyTorch, TensorFlow, Scikit-learn, XGBoost, LightGBM}
+  \cvskill{LLMs / GenAI}{vLLM, TGI, Ollama, Hugging Face, quantization, LangGraph, LangChain, RAG, Chroma, tool calling, MCP}
+  \cvskill{Containers / Platform}{Kubernetes, Docker, Red Hat OpenShift, OpenShift Pipelines, Proxmox, Helm, Nutanix}
+  \cvskill{CI/CD / Automation}{Git, GitHub Actions, Forgejo, Ansible, Terraform, Python, Bash, n8n}
+  \cvskill{Observability / Data}{Prometheus, Grafana, Loki, Alloy, Elasticsearch, Kibana, ECE, Pandas, NumPy, SQL, ETL, Hadoop}
+  \cvskill{APIs / Software}{Python, FastAPI, Flask, REST APIs, microservices, PyPI packaging}
+  \cvskill{Operating Systems}{Linux (RHEL, Rocky, Ubuntu, Debian), Solaris}
+\end{cvskills}
+
+%-------------------------------------------------------------------------------
+\cvsection{Education}
+\begin{cventries}
+  \cventry
+    {B.Sc. (Hons) Computer Science with Artificial Intelligence -- Upper Second Class Honours (2:1)}
+    {Heriot-Watt University Dubai}
+    {Dubai, UAE}
+    {Sep 2020 -- Jun 2023}
+    {
+      \begin{cvitems}
+        \item {Deputy Principal's Award for academic excellence.}
+        \item {AI-focused coursework included neural networks, supervised and unsupervised machine learning, applied text analysis/NLP and computer vision foundations.}
+      \end{cvitems}
+    }
+\end{cventries}
+
+%-------------------------------------------------------------------------------
+\cvsection{Certifications}
+\begin{cvskills}
+  \cvskill{2024}{Data Science A-Z -- SuperDataScience}
+  \cvskill{2023}{Azure Data Fundamentals -- Microsoft}
+  \cvskill{2023}{Career Essentials in Data Analysis -- Microsoft}
+  \cvskill{2021}{Certified Junior Associate -- Java -- Oracle}
+\end{cvskills}
+
+%-------------------------------------------------------------------------------
+\cvsection{Languages}
+\begin{cvskills}
+  \cvskill{Languages}{English (fluent), Hindi, Urdu}
+\end{cvskills}
+
+\end{document}

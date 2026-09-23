@@ -1,0 +1,86 @@
+%-------------------------------------------------------------------------------
+%	SECTION TITLE
+%-------------------------------------------------------------------------------
+\cvsection{Projects}
+
+
+%-------------------------------------------------------------------------------
+%	CONTENT
+%-------------------------------------------------------------------------------
+\begin{cventries}
+	
+	%---------------------------------------------------------
+	\cventry
+	{vLLM, TGI, Ollama, Kubernetes, LangChain, LangGraph, Chroma} % Tech stack
+	{Local GenAI Stack - LLM Serving, RAG, and Agentic Orchestration} % Title
+	{}
+	{}
+	{
+		\begin{cvitems}
+			\item {Deployed Qwen, DeepSeek and LLaMA-family open-weight models fully offline on a self-managed Kubernetes cluster, benchmarking vLLM, Hugging Face TGI and Ollama as inference runtimes.}
+		    \item {Exposed an OpenAI-compatible inference API through vLLM and configured tool calling with automatic tool choice and a Hermes-style parser for agentic applications.}
+		   \item {Built LangGraph orchestration workflows with stateful multi-step execution, tool selection, conditional routing and handoff patterns.}
+	       	\item {Ran GGUF, GPTQ and AWQ quantized models and measured throughput/latency trade-offs across runtimes and quantization levels to select suitable deployment configurations for constrained GPU resources.}
+	    	\item {Built a LangChain RAG pipeline over a Markdown knowledge base using local embeddings and Chroma, tuning chunking, retrieval top-K and prompt construction against context-window constraints.}
+	    \end{cvitems}
+	}
+
+	%---------------------------------------------------------
+    
+    \cventry
+    {Kubernetes, Proxmox, Helm, Prometheus, Grafana, Loki, Tailscale} % Tech stack
+    {Self-Hosted Kubernetes Platform } % Title
+    {}
+    {}
+    {
+    	\begin{cvitems}
+    		\item Built and operate a 3-node kubeadm Kubernetes cluster on Proxmox and bare-metal nodes, running services such as file sync, document management, self-hosted AI model stack and Forgejo, a self-hosted Git.
+    		\item Designed the storage layer with dynamic PV provisioning through CSIs, CloudNativePG for stateful Postgres workloads, and backups.
+    		\item Implemented cluster networking and access control, along with Tailscale to manage remote connectivity to the cluster applications
+    		\item Deployed full-stack observability with kube-prometheus-stack, Grafana, Loki and Alloy for metrics and logs across cluster and application workloads.
+    	\end{cvitems}
+    }
+	
+	%---------------------------------------------------------
+	\cventry
+	{PyTorch, TensorFlow, Scikit-learn, NLP} % Tech stack
+	{Advertisement Detection (Final-Year Capstone)} % Title
+	{}
+	{}
+	{
+		\begin{cvitems}
+			\item Personally implemented and trained classifiers on a 1M+ row URL dataset assembled from multiple sources
+			\item Engineered NLP-based features from URL structure to detect ad links.
+			\item Compared neural networks, XGBoost, SVMs, LightGBM and Random Forests to find the best-performing model and reached 80\% classification accuracy.
+		\end{cvitems}
+	}
+	
+	%---------------------------------------------------------
+	\cventry
+	{TensorFlow, Scikit-learn, NLP, Pandas} % Tech stack
+	{Sentiment Analysis - Amazon Reviews (227k) and Twitter (10k+)} % Title
+	{}
+	{}
+	{
+		\begin{cvitems}
+			\item Two end-to-end NLP pipelines: ETL, text preprocessing, feature engineering, model training, evaluation and visualisation.
+			\item Achieved 90\% classification accuracy on Amazon and 92\% on Twitter by combining neural networks with classical methods (XGBoost, SVMs, Random Forests) and hyperparameter tuning.
+		\end{cvitems}
+	}
+	
+	
+	%---------------------------------------------------------
+	\cventry
+	{Python, REST APIs, PyPi, Github CI/CD pipelines} % Tech stack
+	{vscan - Open-source Python security scanner} % Title
+	{}
+	{}
+	{
+		\begin{cvitems}
+			\item Project lead on a Python-based virus scanner that uses different APIs to scan files and websites for malicious content.
+			\item Built a GitHub Actions CI/CD pipeline that runs tests on every pull request and automatically builds and publishes versioned releases to PyPi on tagged commits.
+		\end{cvitems}
+	}
+	
+	%---------------------------------------------------------
+\end{cventries}
