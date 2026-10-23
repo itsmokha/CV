@@ -20,8 +20,9 @@
 			\item {Deployed Qwen, DeepSeek and LLaMA-family open-weight models fully offline on a self-managed Kubernetes cluster, benchmarking vLLM, Hugging Face TGI and Ollama as inference runtimes.}
 		    \item {Exposed an OpenAI-compatible inference API through vLLM and configured tool calling with automatic tool choice and a Hermes-style parser for agentic applications.}
 		   \item {Built LangGraph orchestration workflows with stateful multi-step execution, tool selection, conditional routing and handoff patterns.}
-	       	\item {Ran GGUF, GPTQ and AWQ quantized models and measured throughput/latency trade-offs across runtimes and quantization levels to select suitable deployment configurations for constrained GPU resources.}
+	       	\item {Benchmarked GGUF, GPTQ and AWQ quantized models across vLLM and Ollama, measuring TTFT, tokens per second, latency and GPU memory usage to select deployment configurations for constrained GPU resources.}
 	    	\item {Built a LangChain RAG pipeline over a Markdown knowledge base using local embeddings and Chroma, tuning chunking, retrieval top-K and prompt construction against context-window constraints.}
+	    	\item {Tuned vLLM serving parameters including max context length, GPU memory utilisation and concurrent request limits to balance KV cache capacity against throughput.}
 	    \end{cvitems}
 	}
 
@@ -34,7 +35,7 @@
     {}
     {
     	\begin{cvitems}
-    		\item Built and operate a 3-node kubeadm Kubernetes cluster on Proxmox and bare-metal nodes, running services such as file sync, document management, self-hosted AI model stack and Forgejo, a self-hosted Git.
+    		\item Built and operate a 3-node kubeadm Kubernetes cluster across Proxmox and bare-metal nodes, scheduling GPU inference workloads alongside file sync, document management and Forgejo.
     		\item Designed the storage layer with dynamic PV provisioning through CSIs, CloudNativePG for stateful Postgres workloads, and backups.
     		\item Implemented cluster networking and access control, along with Tailscale to manage remote connectivity to the cluster applications
     		\item Deployed full-stack observability with kube-prometheus-stack, Grafana, Loki and Alloy for metrics and logs across cluster and application workloads.
